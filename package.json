@@ -1,0 +1,22 @@
+{
+  "name": "caveman-skill",
+  "version": "1.0.0",
+  "description": "Ultra-compressed LLM communication mode. Cuts ~75% tokens, keeps 100% technical accuracy.",
+  "type": "module",
+  "bin": {
+    "caveman-skill": "./cli/index.js"
+  },
+  "scripts": {
+    "install": "node cli/index.js"
+  },
+  "files": [
+    "cli/",
+    "SKILL.md",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuritoledo/caveman-skill.git"
+  },
+  "license": "MIT"
+}

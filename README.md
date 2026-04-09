@@ -85,22 +85,34 @@ Level sticks until you change it or session ends.
 
 ## Install
 
-### Option 1: Clone & link
+### Option 1: CLI (recommended)
+
+```bash
+npx caveman-skill install
+```
+
+Auto-detects your agent and installs to the right path. Or specify directly:
+
+```bash
+npx caveman-skill install --agent qwen-code
+npx caveman-skill install --agent claude-code
+npx caveman-skill install --agent cursor
+```
+
+### Option 2: Clone & link
 
 ```bash
 git clone https://github.com/yuritoledo/caveman-skill.git
 ```
 
-Then point your agent to the `SKILL.md` file, or copy it into your agent's skills directory.
+Then point your agent to the `SKILL.md` file.
 
-### Option 2: Copy the skill
+### Option 3: Manual copy
 
-Grab the [`SKILL.md`](SKILL.md) file and place it wherever your agent reads skills from.
+Grab the [`SKILL.md`](SKILL.md) file and place it in:
 
-### Agent-specific paths
-
-| Agent | Put `SKILL.md` in |
-|-------|-------------------|
+| Agent | Path |
+|-------|------|
 | Qwen Code | `.qwen/skills/caveman/` |
 | Claude Code | `.claude/skills/` |
 | Cursor | `.cursor/skills/` |
@@ -131,6 +143,28 @@ Real token counts from LLM APIs:
 
 *Range: 22%–87% savings across prompts. Simple answers save less, complex ones save more.*
 
+## CLI Installer
+
+```bash
+npx caveman-skill install
+```
+
+Interactively detects your agent and installs the skill to the right path.
+
+Or specify your agent:
+
+```bash
+npx caveman-skill install --agent qwen-code
+npx caveman-skill install --agent claude-code
+npx caveman-skill install --agent cursor
+npx caveman-skill install --agent windsurf
+npx caveman-skill install --agent cline
+```
+
 ## License
 
 MIT — free like mass mammoth on open plain.
+
+---
+
+**Based on** [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) — the original. Forked with permission and love.
